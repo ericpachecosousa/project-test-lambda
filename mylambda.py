@@ -24,7 +24,7 @@ def lambda_handler(event, context):
     http = urllib3.PoolManager()
     r = http.request('GET', 'https://viacep.com.br/ws/{}/json/'.format(cep))
 
-    
+    ##
     ##Buscar nome do bucket criptografado
     s3NameEncrypted = os.environ['BUCKET_NAME']
     s3NameDecrypted = kms_client.decrypt(
