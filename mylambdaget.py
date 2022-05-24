@@ -14,6 +14,7 @@ def lambda_handler(event, context):
     ##Buscar object_key e nome do Bucket através do evento
     ##bucket = event['Records'][0]['s3']['bucket']['name']
     ##key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
+    ##teste
     for record in event['Records']:
         jsonmaybe=(record["body"])
         jsonmaybe=json.loads(jsonmaybe)
